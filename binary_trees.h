@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <stdio.h>
+#include <stddef.h>
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -63,5 +64,6 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int isBSTHelper(const binary_tree_t* root, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
+bst_t* array_to_bst(int *array, size_t size);
 
 #endif
