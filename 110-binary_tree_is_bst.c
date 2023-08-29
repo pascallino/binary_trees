@@ -31,6 +31,8 @@ int isBSTHelper(const binary_tree_t *root, int min, int max)
  */
 int binary_tree_is_bst(const binary_tree_t *root)
 {
+	if (!tree)
+		return (0);
 	/*Call the helper function with an initial valid range*/
 	return (isBSTHelper(root, INT_MIN, INT_MAX));
 }
