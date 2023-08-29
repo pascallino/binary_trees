@@ -24,7 +24,7 @@ bst_t *findMinNode(bst_t *node)
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
-	bst_t *temp;
+	bst_t *temp = NULL;
 
 	if (root == NULL)
 	{
