@@ -56,6 +56,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		current = current->parent;
 	}
 
-	return (NULL); /* No common ancestor found*/
+	/*return (NULL);*/ /* No common ancestor found*/
+	return ((binary_tree_t *)first);
 }
 
