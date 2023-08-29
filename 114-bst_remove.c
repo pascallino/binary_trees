@@ -1,74 +1,96 @@
 #include "binary_trees.h"
-bst_t *inorder_successor(bst_t *node);
-bst_t *delete(bst_t *root, int value);
 /**
- * bst_remove - Removes a node from a Binary Search Tree.
- *
- * @root: A pointer to the root node of the tree where you will remove a node.
- * @value: The value to remove in the tree.
- *
- * Return: A pointer to the new root node of the tree after removing.
+ * custom_find_min - find the minimum node from the left subtree
+ * @current_root: node
+ * Return: bst min node
  */
-bst_t *bst_remove(bst_t *root, int value)
+bst_t *custom_find_min(bst_t *current_root)
 {
-	return (delete(root, value));
+	while (current_root->left != NULL)
+		current_root = current_root->left;
+	return (current_root);
 }
 
 /**
- * delete - Deletes a node from a binary search tree.
- * @root: A pointer to the root node of the BST.
- * @value: The value to remove from the BST.
- *
- * Return: A pointer to the new root node after deletion.
+ * custom_bst_delete - Delete a node from the BST
+ * @current_root: node
+ * @tempnode: temp node to delete
+ * Return: root node
  */
-bst_t *delete(bst_t *root, int value)
+bst_t *custom_bst_delete(bst_t *current_root, bst_t *tempnode)
 {
-	bst_t *temp;
+	bst_t *parent = tempnode->parent;
+	bst_t *successor = NULL;
 
-	if (root == NULL)
-		return (root);
-
-	if (value < root->n)
-		root->left = delete(root->left, value);
-	else if (value > root->n)
-		root->right = delete(root->right, value);
-	else
-	{ /*Node with the value to be deleted found*/
-		if (root->left == NULL)
-		{
-			temp = root->right;
-			free(root);
-			return (temp);
-		}
-		else if (root->right == NULL)
-		{
-			temp = root->left;
-			free(root);
-			return (temp);
-		}
-
-		/*Node with two children; find the in-order successor*/
-		temp = inorder_successor(root->right);
-
-		/*Copy the in-order successor's value to this node*/
-		root->n = temp->n;
-
-		/*Recursively delete the in-order successor*/
-		root->right = delete(root->right, temp->n);
+	/*right-child only but no children*/
+	if (tempnode->left == NULL)
+	{
+		if (parent != NULL && parent->left == tempnode)
+			parent->left = tempnode->right;
+		else if (parent != NULL)
+			parent->right = tempnode->right;
+		if (tempnode->right != NULL)
+			tempnode->right->parent = parent;
+		free(tempnode);
+		return (parent == NULL ? tempnode->right : current_root);
 	}
-	return (root);
+
+	/* Left-child only */
+	if (tempnode->right == NULL)
+	{
+		if (parent != NULL && parent->left == tempnode)
+			parent->left = tempnode->left;
+		else if (parent != NULL)
+			parent->right = tempnode->left;
+		if (tempnode->left != NULL)
+			tempnode->left->parent = parent;
+		free(tempnode);
+		return (parent == NULL ? tempnode->left : current_root);
+	}
+
+	/*A parent with  Two children */
+	successor = custom_find_min(tempnode->right);
+	tempnode->n = successor->n;
+
+	return (custom_bst_delete(current_root, successor));
 }
 
 /**
- * inorder_successor - Returns the minimum value node of a binary search tree.
- * @node: A pointer to the root node of the BST.
+ * custom_bst_remove_helper -  helper function to delte the target
+ * temp node
+ * @current_root: root node
+ * @value:  node data
+ * @tempnode: temp node to delete
+ * Return: root
  *
- * Return: The minimum value node in the BST.
  */
-bst_t *inorder_successor(bst_t *node)
+bst_t *custom_bst_remove_helper(bst_t *current_root, bst_t *tempnode,
+		int value)
 {
-	while (node->left != NULL)
-		node = node->left;
-	return (node);
+	if (tempnode != NULL)
+	{
+		if (tempnode->n == value)
+			return (custom_bst_delete(current_root, tempnode));
+		if (tempnode->n > value)
+		{
+			return (custom_bst_remove_helper(current_root, tempnode->left, value));
+		}
+		else
+		{
+		return (custom_bst_remove_helper(current_root, tempnode->right, value));
+		}
+	}
+	return (NULL);
+}
+
+/**
+ * custom_bst_remove -  a function to remove a node from a BST
+ * @tree: tree root
+ * @value: the target value to find and remove
+ * Return: root of the target tree
+ */
+bst_t *bst_remove(bst_t *tree, int value)
+{
+	return (custom_bst_remove_helper(tree, tree, value));
 }
 
