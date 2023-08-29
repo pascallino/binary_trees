@@ -28,7 +28,7 @@ bst_t *bst_remove(bst_t *root, int value)
 
 	if (root == NULL)
 	{
-		return (root); /*If the tree is empty, return NULL.*/
+		return (NULL); /*If the tree is empty, return NULL.*/
 	}
 
 	/*Search for the node with the given value*/
