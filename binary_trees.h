@@ -58,15 +58,15 @@ void binary_levelorder_helper(const binary_tree_t *tree,
 int binary_tree_is_complete(const binary_tree_t *tree);
 int isComplete(const binary_tree_t *tree, int i, int n);
 size_t size4completebinary(const binary_tree_t *tree);
-binary_tree_t* binary_tree_rotate_left(binary_tree_t* tree);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
-int isBSTHelper(const binary_tree_t* root, int min, int max);
+int isBSTHelper(const binary_tree_t *root, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
-bst_t* array_to_bst(int *array, size_t size);
+bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
-bst_t *findMinNode(bst_t* node);
+bst_t *findMinNode(bst_t *node);
 
 #endif
