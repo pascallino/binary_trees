@@ -70,4 +70,6 @@ bst_t *bst_remove(bst_t *root, int value);
 bst_t *findMinNode(bst_t *node);
 bst_t *bst_min_val(bst_t *root);
 int binary_tree_is_avl(const binary_tree_t *tree);
+int binary_tree_is_heap(const binary_tree_t *tree);
+
 #endif
