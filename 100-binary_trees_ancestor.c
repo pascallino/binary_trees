@@ -35,13 +35,14 @@ int isDescendant(const binary_tree_t *root, const binary_tree_t *node)
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
-	const binary_tree_t *current = first;
+	const binary_tree_t *current;
 
 	if (!first || !second)
 		return (NULL);
 	if (first == second)
 		return ((binary_tree_t *)first);
 
+	current = first;
 	while (current != NULL)
 	{
 		if (isDescendant(current->left, second))
