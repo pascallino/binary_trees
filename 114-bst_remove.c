@@ -84,7 +84,7 @@ bst_t *custom_bst_remove_helper(bst_t *current_root, bst_t *tempnode,
 }
 
 /**
- * custom_bst_remove -  a function to remove a node from a BST
+ * bst_remove -  a function to remove a node from a BST
  * @tree: tree root
  * @value: the target value to find and remove
  * Return: root of the target tree
