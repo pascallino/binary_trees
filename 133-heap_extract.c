@@ -1,113 +1,112 @@
 #include "binary_trees.h"
-void heapify_down(heap_t *root);
 heap_t *find_last_node(heap_t *root);
+heap_t *find_max_child(heap_t *node);
+void heapify(heap_t *root);
 /**
  * heap_extract - Extracts the root node of a Max Binary Heap.
  *
- * @root: A double pointer to the root node of the heap.
+ * @root: A double pointer to the root node of heap.
  *
- * Return: The value stored in the root node,
- * or 0 if the heap is empty or fails.
+ * Return: The value stored in the root node.
  */
 int heap_extract(heap_t **root)
 {
-	int extracted_value;
+	int value;
 	heap_t *last_node;
 
-	if (!*root)
+	if (!root || !*root)
 		return (0);
 
-	extracted_value = (*root)->n;
+	value = (*root)->n;
 
 	if (!(*root)->left)
 	{
-		extracted_value = (*root)->n;
 		free(*root);
 		*root = NULL;
-		return (extracted_value);
+		return (value);
 	}
 
-	/*Find the last level-order node*/
 	last_node = find_last_node(*root);
-
-	/*Replace root value with last node's value*/
 	(*root)->n = last_node->n;
 
-	/*Remove the last node*/
-	if (last_node->parent)
-	{
-		if (last_node->parent->left == last_node)
-			last_node->parent->left = NULL;
-		else
-			last_node->parent->right = NULL;
-	}
+	if (last_node->parent->left == last_node)
+		last_node->parent->left = NULL;
 	else
-	{
-		/*If the last node is the root, set the root to NULL*/
-		*root = NULL;
-	}
+		last_node->parent->right = NULL;
 
 	free(last_node);
+	heapify(*root);
 
-	/*Rebuild the heap to maintain the Max Binary Heap property*/
-	heapify_down(*root);
-
-	return (extracted_value);
+	return (value);
 }
 
 /**
- * find_last_node - Finds the last level-order node in a binary tree.
+ * find_last_node - Finds the last node in a Max Binary Heap.
  *
- * @root: A pointer to the root node of the tree.
+ * @root: A pointer to the root node of the heap.
  *
- * Return: A pointer to the last level-order node.
+ * Return: The last node in the heap.
  */
 heap_t *find_last_node(heap_t *root)
 {
-	heap_t *last_node;
+	heap_t *last_node = root;
 
-	if (root == NULL)
-		return (NULL);
-
-	last_node = NULL;
-
-	/*Perform a level-order traversal to find the last node*/
-	for (; root; root = root->left)
+	while (last_node->left || last_node->right)
 	{
-		if (root->left)
-			last_node = root->left;
-		if (root->right)
-			last_node = root->right;
+		if (last_node->right)
+			last_node = last_node->right;
+		else
+			last_node = last_node->left;
 	}
 
 	return (last_node);
 }
 
 /**
- * heapify_down - Restores the Max Binary Heap
- * property by moving down the tree.
+ * heapify - Maintains the max heap property after root extraction.
  *
- * @root: A pointer to the root node of the tree.
+ * @root: A pointer to the root node of the heap.
  */
-void heapify_down(heap_t *root)
+void heapify(heap_t *root)
 {
-	int temp;
-	heap_t *largest = root;
-	heap_t *left = root->left;
-	heap_t *right = root->right;
+	int value;
+	heap_t *max_child;
 
-	if (left && left->n > largest->n)
-		largest = left;
-
-	if (right && right->n > largest->n)
-		largest = right;
-
-	if (largest != root)
+	while (1)
 	{
-		temp = root->n;
-		root->n = largest->n;
-		largest->n = temp;
-		heapify_down(largest);
+		max_child = find_max_child(root);
+
+		if (!max_child || max_child->n <= root->n)
+			break;
+
+		value = root->n;
+		root->n = max_child->n;
+		max_child->n = value;
+
+		root = max_child;
 	}
+}
+
+/**
+ * find_max_child - Finds the maximum child node of a tree.
+ *
+ * @node: A pointer to the root node of the tree.
+ *
+ * Return: The maximum child node.
+ */
+heap_t *find_max_child(heap_t *node)
+{
+	heap_t *left_child, *right_child;
+
+	left_child = node->left;
+	right_child = node->right;
+
+	if (!left_child && !right_child)
+		return (NULL);
+
+	if (!right_child || left_child->n >= right_child->n)
+		return (left_child);
+
+	return (right_child);
 }
 
