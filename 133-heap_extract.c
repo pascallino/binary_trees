@@ -19,6 +19,14 @@ int heap_extract(heap_t **root)
 
 	extracted_value = (*root)->n;
 
+	if (!(*root)->left)
+	{
+		extracted_value = (*root)->n;
+		free(*root);
+		*root = NULL;
+		return (extracted_value);
+	}
+
 	/*Find the last level-order node*/
 	last_node = find_last_node(*root);
 
