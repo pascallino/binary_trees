@@ -14,7 +14,7 @@ int heap_extract(heap_t **root)
 	int extracted_value;
 	heap_t *last_node;
 
-	if (root == NULL || *root == NULL)
+	if (!*root)
 		return (0);
 
 	extracted_value = (*root)->n;
