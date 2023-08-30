@@ -11,7 +11,7 @@ void heapify(heap_t *root);
  */
 int heap_extract(heap_t **root)
 {
-	int value;
+	int value = 0;
 	heap_t *last_node;
 
 	if (!root || !*root)
