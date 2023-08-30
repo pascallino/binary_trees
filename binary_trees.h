@@ -72,5 +72,6 @@ bst_t *bst_min_val(bst_t *root);
 int binary_tree_is_avl(const binary_tree_t *tree);
 int binary_tree_is_heap(const binary_tree_t *tree);
 heap_t *heap_insert(heap_t **root, int value);
+heap_t *array_to_heap(int *array, size_t size);
 
 #endif
