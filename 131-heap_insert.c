@@ -24,8 +24,28 @@ size_t binary_tree_sizeh(const binary_tree_t *tree)
 	/* plus the sizes of the left and right subtrees*/
 	return (1 + leftSize + rightSize);
 
+}
+/**
+ * binary_tree_node2 - ceate a node
+ * @parent: new node
+ * @value: node value
+ * Return: Node
+ */
+binary_tree_t *binary_tree_node2(binary_tree_t *parent, int value)
+{
 
+	binary_tree_t *newnode = (binary_tree_t *) malloc(sizeof(binary_tree_t));
 
+	if (newnode == NULL)
+	{
+		return (NULL);
+	}
+	newnode->parent = parent;
+	newnode->n = value;
+	newnode->left = NULL;
+	newnode->right = NULL;
+
+	return (newnode);
 }
 /**
  * heap_insert - Inserts a value into a binary max heap.
@@ -44,7 +64,7 @@ heap_t *heap_insert(heap_t **root, int value)
 		return (NULL);
 
 	if (!(*root))
-		return (*root = binary_tree_node(NULL, value));
+		return (*root = binary_tree_node2(NULL, value));
 
 	tree = *root;
 	tree_size = binary_tree_sizeh(tree);
@@ -67,7 +87,7 @@ heap_t *heap_insert(heap_t **root, int value)
 	}
 
 	/*Create a new node and insert it into the heap*/
-	new_node = binary_tree_node(current_parent, value);
+	new_node = binary_tree_node2(current_parent, value);
 	(remaining_leaves & 1) ? (current_parent->right = new_node) :
 		(current_parent->left = new_node);
 
