@@ -104,3 +104,7 @@ prototypes for all types and functions written for the project.
 * **10. Depth**
   * [10-binary_tree_depth.c](./10-binary_tree_depth.c): C function that returns
   the depth of a given node in a binary tree.
+
+* **11. Size**
+  * [11-binary_tree_size.c](./11-binary_tree_size.c): C function that returns
+  the size of a binary tree.
