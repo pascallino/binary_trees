@@ -50,3 +50,5 @@ trees in a pretty way.
 ## Header File :file_folder:
 * [binary_trees.h](./binary_trees.h): Header file containing definitions and
 prototypes for all types and functions written for the project.
+
+## Tasks :page_with_curl:
