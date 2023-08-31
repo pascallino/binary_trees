@@ -28,6 +28,8 @@ typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 ```
 
+### AVL Tree
+
 ## Tests :heavy_check_mark:
 
 * [tests](./tests): Folder of test files for all tasks. Provided by Holberton
