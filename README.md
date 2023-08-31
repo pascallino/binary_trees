@@ -165,3 +165,8 @@ prototypes for all types and functions written for the project.
   * [104-binary_tree_rotate_right.c](./104-binary_tree_rotate_right.c): C function
   that performs a right-rotation on a binary tree.
   * Returns a pointer to the new root node of the tree after rotation.
+
+* **24. Is BST**
+  * [110-binary_tree_is_bst.c](./110-binary_tree_is_bst.c): C function that
+  checks if a binary tree is a valid binary search tree.
+  * Returns `1` if the tree is a valid BST, `0` otherwise.
