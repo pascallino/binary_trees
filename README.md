@@ -208,3 +208,7 @@ prototypes for all types and functions written for the project.
   a binary tree is a valid AVL tree.
   * If the tree is a valid AVL tree, returns `1`.
   * Otherwise, returns `0`.
+
+* **31. AVL - Insert**
+  * [121-avl_insert.c](./121-avl_insert.c): C function that inserts a value in an AVL tree.
+  * Returns a value to the inserted node, or `NULL` on failure.
