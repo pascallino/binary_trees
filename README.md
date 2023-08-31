@@ -160,3 +160,8 @@ prototypes for all types and functions written for the project.
   * [103-binary_tree_rotate_left.c](./103-binary_tree_rotate_left.c): C function
   that performs a left-rotation on a binary tree.
   * Returns a pointer to the new root node of the tree after rotation.
+
+* **23. Rotate right**
+  * [104-binary_tree_rotate_right.c](./104-binary_tree_rotate_right.c): C function
+  that performs a right-rotation on a binary tree.
+  * Returns a pointer to the new root node of the tree after rotation.
