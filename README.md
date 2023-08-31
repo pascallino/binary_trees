@@ -23,6 +23,8 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 ```
 
+### Binary Search Tree
+
 ## Tests :heavy_check_mark:
 
 * [tests](./tests): Folder of test files for all tasks. Provided by Holberton
