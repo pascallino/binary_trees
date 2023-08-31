@@ -182,3 +182,9 @@ prototypes for all types and functions written for the project.
   * [112-array_to_bst.c](./112-array_to_bst.c): C function that builds a binary
   search tree from an array.
   * Returns a pointer to the root node of the created tree, or `NULL` on failure.
+
+* **27. BST - Search**
+  * [113-bst_search.c](./113-bst_search.c): C function that searches for a value
+  in a binary search tree.
+  * If the value is matched in the BST, returns a pointer to the matched node.
+  * Otherwise, returns `NULL`.
