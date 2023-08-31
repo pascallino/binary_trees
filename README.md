@@ -84,3 +84,7 @@ prototypes for all types and functions written for the project.
   * [5-binary_tree_is_root.c](./5-binary_tree_is_root.c): C function that checks
   if a given node is a root.
   * Returns `1` if the node is a root, `0` otherwise.
+
+* **6. Pre-order traversal**
+  * [6-binary_tree_preorder.c](./6-binary_tree_preorder.c): C function that
+  traverses a tree using pre-order traversal.
