@@ -108,3 +108,7 @@ prototypes for all types and functions written for the project.
 * **11. Size**
   * [11-binary_tree_size.c](./11-binary_tree_size.c): C function that returns
   the size of a binary tree.
+
+* **12. Leaves**
+  * [12-binary_tree_leaves.c](./12-binary_tree_leaves.c): C function that returns
+  the number of leaves in a binary tree.
