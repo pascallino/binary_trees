@@ -225,3 +225,10 @@ prototypes for all types and functions written for the project.
     * Inserting the value `n`.
     * Removing the node with the value `n`.
     * Searching for a node in an AVL tree of size `n`.
+
+* **41. Big O #Binary Heap**
+  * [135-O](./135-O): Text file containing the average time complexities of
+  binary heap opeartions (one answer per line):
+    * Inserting the value `n`.
+    * Extracting the root node.
+    * Searching for a node in a binary heap of size `n`.
