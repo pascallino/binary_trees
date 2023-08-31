@@ -188,3 +188,10 @@ prototypes for all types and functions written for the project.
   in a binary search tree.
   * If the value is matched in the BST, returns a pointer to the matched node.
   * Otherwise, returns `NULL`.
+
+* **28. BST - Remove**
+  * [114-bst_remove.c](./114-bst_remove.c): C function that removes a node from
+  a binary search tree.
+  * Returns a pointer to the new root node of the tree after deletion.
+  * If the node to be deleted has two children, it is replaced with its first
+  in-order successor.
