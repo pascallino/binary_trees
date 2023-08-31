@@ -218,3 +218,10 @@ prototypes for all types and functions written for the project.
   from an array.
   * Returns a pointer to the root node of the created AVL tree, or `NULL` on failure.
   * Ignores duplicate values.
+
+* **35. Big O #AVL Tree**
+  * [125-O](./125-O): Text file containing the average time complexities of AVL tree
+  opeartions (one answer per line):
+    * Inserting the value `n`.
+    * Removing the node with the value `n`.
+    * Searching for a node in an AVL tree of size `n`.
