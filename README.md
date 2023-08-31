@@ -92,3 +92,7 @@ prototypes for all types and functions written for the project.
 * **7. In-order traversal**
   * [7-binary_tree_inorder.c](./7-binary_tree_inorder.c): C function that
   traverses a tree using in-order traversal.
+
+* **8. Post-order traversal**
+  * [8-binary_tree_postorder.c](./8-binary_tree_postorder.c): C function that
+  traverses a tree using post-order traversal.
