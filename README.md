@@ -195,3 +195,10 @@ prototypes for all types and functions written for the project.
   * Returns a pointer to the new root node of the tree after deletion.
   * If the node to be deleted has two children, it is replaced with its first
   in-order successor.
+
+* **29. Big O #BST**
+  * [115-O](./115-O): Text file containing the average time complexities of
+  binary search tree operations (one answer per line):
+    * Inserting the value `n`.
+    * Removing the node with the value `n`.
+    * Searching for a node in a BST of size `n`.
