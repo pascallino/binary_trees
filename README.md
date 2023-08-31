@@ -74,3 +74,8 @@ prototypes for all types and functions written for the project.
 * **3. Delete**
   * [3-binary_tree_delete.c](./3-binary_tree_delete.c): C function that deletes
   an entire binary tree.
+
+* **4. Is leaf**
+  * [4-binary_tree_is_leaf.c](./4-binary_tree_is_leaf.c): C function that checks
+  if a given node is a leaf.
+  * Returns `1` if the node is a leaf, `0` otherwise.
