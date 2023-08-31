@@ -70,3 +70,7 @@ prototypes for all types and functions written for the project.
   * Returns a pointer to the new node, or `NULL` on failure.
   * If the given `parent` already contains a right node, the new node takes its
   place and the old right-child becomes the right-child of the new node.
+
+* **3. Delete**
+  * [3-binary_tree_delete.c](./3-binary_tree_delete.c): C function that deletes
+  an entire binary tree.
