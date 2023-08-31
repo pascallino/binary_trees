@@ -135,3 +135,8 @@ prototypes for all types and functions written for the project.
   * [17-binary_tree_sibling.c](./17-binary_tree_sibling.c): C function that
   returns a pointer to the sibling of a given node in a binary tree.
   * Returns `NULL` if no sibling is found.
+
+* **18. Uncle**
+  * [18-binary_tree_uncle.c](./18-binary_tree_uncle.c): C function that
+  returns a pointer to the uncle of a given node in a binary tree.
+  * Returns `NULL` if no uncle is found.
