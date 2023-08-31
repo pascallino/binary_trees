@@ -155,3 +155,8 @@ prototypes for all types and functions written for the project.
   * [102-binary_tree_is_complete.c](./102-binary_tree_is_complete.c): C function
   that checks if a binary tree is complete.
   * Returns `1` if the tree is complete, `0` otherwise.
+
+* **22. Rotate left**
+  * [103-binary_tree_rotate_left.c](./103-binary_tree_rotate_left.c): C function
+  that performs a left-rotation on a binary tree.
+  * Returns a pointer to the new root node of the tree after rotation.
