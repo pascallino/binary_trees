@@ -120,3 +120,8 @@ prototypes for all types and functions written for the project.
 * **14. Balance factor**
   * [14-binary_tree_balance.c](./14-binary_tree_balance.c): C function that
   returns the balance factor of a binary tree.
+
+* **15. Is full**
+  * [15-binary_tree_is_full.c](./15-binary_tree_is_full.c): C function that
+  checks if a binary tree is full.
+  * Returns `1` if a tree is full, `0` otherwise.
