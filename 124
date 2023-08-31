@@ -1,6 +1,7 @@
 #include "binary_trees.h"
 /**
  * create_avl -  Recusrsive dunction to create an AVL from a sorted array
+ * @rootnode: Root to be created
  * @array: pointer to the first element of the array
  * @start: Index of the first element of the current subarray
  * @end: Index of the last element in the current subarray
@@ -8,11 +9,14 @@
  */
 avl_t *create_avl(binary_tree_t *rootnode, int *array, int start, int end)
 {
+	int mid;
+	avl_t *root;
+
 	if (start > end)
 		return (NULL);
 
-	int mid = (start + end) / 2;
-	avl_t *root =(avl_t *)binary_tree_node(rootnode, array[mid]);
+	mid = (start + end) / 2;
+	root = (avl_t *)binary_tree_node(rootnode, array[mid]);
 
 	if (!root)
 		return (NULL);
