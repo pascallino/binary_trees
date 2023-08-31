@@ -130,3 +130,8 @@ prototypes for all types and functions written for the project.
   * [16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c): C function
   that checks if a binary tree is perfect.
   * Returns `1` if a tree is perfect, `0` otherwise.
+
+* **17. Sibling**
+  * [17-binary_tree_sibling.c](./17-binary_tree_sibling.c): C function that
+  returns a pointer to the sibling of a given node in a binary tree.
+  * Returns `NULL` if no sibling is found.
