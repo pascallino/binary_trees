@@ -116,3 +116,7 @@ prototypes for all types and functions written for the project.
 * **13. Nodes**
   * [13-binary_tree_nodes.c](./13-binary_tree_nodes.c): C function that returns
   the number of nodes in a binary tree with at least one child.
+
+* **14. Balance factor**
+  * [14-binary_tree_balance.c](./14-binary_tree_balance.c): C function that
+  returns the balance factor of a binary tree.
