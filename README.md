@@ -29,6 +29,9 @@ typedef struct binary_tree_s bst_t;
 ```
 
 ### AVL Tree
+```
+typedef struct binary_tree_s avl_t;
+```
 
 ## Tests :heavy_check_mark:
 
