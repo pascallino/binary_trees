@@ -79,3 +79,8 @@ prototypes for all types and functions written for the project.
   * [4-binary_tree_is_leaf.c](./4-binary_tree_is_leaf.c): C function that checks
   if a given node is a leaf.
   * Returns `1` if the node is a leaf, `0` otherwise.
+
+* **5. Is root**
+  * [5-binary_tree_is_root.c](./5-binary_tree_is_root.c): C function that checks
+  if a given node is a root.
+  * Returns `1` if the node is a root, `0` otherwise.
