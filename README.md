@@ -125,3 +125,8 @@ prototypes for all types and functions written for the project.
   * [15-binary_tree_is_full.c](./15-binary_tree_is_full.c): C function that
   checks if a binary tree is full.
   * Returns `1` if a tree is full, `0` otherwise.
+
+* **16. Is perfect**
+  * [16-binary_tree_is_perfect.c](./16-binary_tree_is_perfect.c): C function
+  that checks if a binary tree is perfect.
+  * Returns `1` if a tree is perfect, `0` otherwise.
