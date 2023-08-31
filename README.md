@@ -34,11 +34,11 @@ typedef struct binary_tree_s avl_t;
 ```
 
 ### Max Binary Heap
-
-## Tests :heavy_check_mark:
 ```
 typedef struct binary_tree_s heap_t;
 ```
+
+## Tests :heavy_check_mark:
 
 * [tests](./tests): Folder of test files for all tasks. Provided by Holberton
 School.
