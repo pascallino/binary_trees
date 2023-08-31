@@ -202,3 +202,9 @@ prototypes for all types and functions written for the project.
     * Inserting the value `n`.
     * Removing the node with the value `n`.
     * Searching for a node in a BST of size `n`.
+
+* **30. Is AVL**
+  * [120-binary_tree_is_avl.c](./120-binary_tree_is_avl.c): C function that checks if
+  a binary tree is a valid AVL tree.
+  * If the tree is a valid AVL tree, returns `1`.
+  * Otherwise, returns `0`.
