@@ -88,3 +88,7 @@ prototypes for all types and functions written for the project.
 * **6. Pre-order traversal**
   * [6-binary_tree_preorder.c](./6-binary_tree_preorder.c): C function that
   traverses a tree using pre-order traversal.
+
+* **7. In-order traversal**
+  * [7-binary_tree_inorder.c](./7-binary_tree_inorder.c): C function that
+  traverses a tree using in-order traversal.
