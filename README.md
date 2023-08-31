@@ -150,3 +150,8 @@ prototypes for all types and functions written for the project.
 * **20. Level-order traversal**
   * [101-binary_tree_levelorder.c](./101-binary_tree_levelorder.c): C function
   that traverses a binary tree using level-order traversal.
+
+* **21. Is complete**
+  * [102-binary_tree_is_complete.c](./102-binary_tree_is_complete.c): C function
+  that checks if a binary tree is complete.
+  * Returns `1` if the tree is complete, `0` otherwise.
