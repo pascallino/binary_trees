@@ -1,6 +1,7 @@
 # C - Binary trees
 
 ## structures
+### Basic Binary Tree
 
 ## Tests :heavy_check_mark:
 
