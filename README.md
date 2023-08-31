@@ -146,3 +146,7 @@ prototypes for all types and functions written for the project.
   that returns a pointer to the lowest common ancestor node of two given nodes
   in a binary tree.
   * Returns `NULL` if no common ancestor is found.
+
+* **20. Level-order traversal**
+  * [101-binary_tree_levelorder.c](./101-binary_tree_levelorder.c): C function
+  that traverses a binary tree using level-order traversal.
